@@ -15,8 +15,6 @@ for test in $(find ./tests/*.test); do
   echo test $test
   expected=$(cat $test | python3 test.py)
   actual=$(cat $test | $1)
-    echo actual "$actual"
-    echo expected "$expected"
   if [[ $actual != $expected ]]; then
     echo "FAILED $test"
     echo actual "$actual"
