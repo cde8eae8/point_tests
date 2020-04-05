@@ -10,7 +10,6 @@ for i in range(n):
 
 ans = 1000000000000000000
 for i in range(len(points)):
-    for j in range(len(points)):
-        if (i == j): continue
+    for j in range(i+1, len(points)):
         ans = min(ans, dist(points[i], points[j]))
 print(ans)
