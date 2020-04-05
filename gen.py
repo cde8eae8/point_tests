@@ -11,7 +11,7 @@ def f(n):
     return str(n) + '.test'
 
 def randpoints(n = 100, min=-100000, max=100000):
-    return [(randint(-min, max), randint(-min, max)) for i in range(n)]
+    return [(randint(min, max), randint(min, max)) for i in range(n)]
 
 gen(f(1), [(0, 0), (0, 0)])
 gen(f(2), [(1, 1), (-1, -1)])
